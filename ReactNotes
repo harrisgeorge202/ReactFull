@@ -1,0 +1,138 @@
+super()
+means it inherits from React.Component
+
+
+
+
+
+class Home extends .....
+<button> onClick = {this.makeOver</button>
+
+this in js means it refers to whatever is executing the function and not to the home class,  'this' is refering to what is executing the method and here the button is executing the function the method to make this refer to the 'Home' class we have to bind this like
+
+<button> onClick = {this.makeOver.bind(this)} </button>
+also can be written as
+<button> onClick = {() => this.makeOver()} </button>
+another note we dont need to bind if we dont use this keyword in the function 
+eg:
+makeOver() {
+alert('Hello')
+}
+ther is no this keyword here so no need to bind
+
+
+
+preventDefault
+
+
+
+
+
+
+
+redux=================>
+
+reducer will give new state
+
+in reducer we have to return state so the state will change
+
+store here is a new action
+store will send action to reducer
+reducer will handle the action
+
+
+
+
+in switch we  write action
+
+
+
+Application dispaches actions
+Actions arehandled by reducers
+The reducers return a new state
+The state is stored in the store
+And the store then passes this back to our application
+
+
+
+
+
+Create a store 
+We tell the store who is responsible for changing the state
+We then dispatch an action 
+Dispached action is handled by the reducer
+In reducer we execute some code and return state that is the new state 
+the new state is stored in the store 
+
+
+
+
+
+Spread operator
+
+
+const initialState = {
+    result: 1,
+    lastValues: []
+};
+ 
+---------------
+state = {
+result: state.result,
+lastValues: state.lastValues
+}
+----------------
+This is same as
+
+----------------
+...state
+----------------
+
+
+This is called spread operator
+
+
+
+
+ladder means last
+
+
+
+mULTIPLE REDUCERS each action should be unique
+
+
+Provider in react-redux provides the store
+and is used to connect the store with the react app
+
+
+
+Tell
+Which property and which actions I should use in my component
+
+
+Which property of my global application state do I wanna use in this component 
+and then to which local properties in this component do I want to map them
+
+
+
+Provider connects to the store But to connect react js with redux
+We also have to connect each component which needs access to the store for that we use connect()
+
+
+
+mapDispatchToProps is nothig but action
+
+To define which properties of my state I need in which component and which actions I want to dispatch here we use 2 methods
+ 
+
+1) mapStateToProps
+   Which properties of my global application state do i want to use in this component 
+   and then to which local propertis in this component do I want to map them
+
+2) mapDispatchToProps is nothig but action. that is which action we want to use in this component
+
+
+
+
+
+
